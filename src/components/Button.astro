@@ -1,0 +1,33 @@
+---
+const { variant, size } = Astro.props;
+---
+
+<!-- 
+ <Button variant="primary" size="small">MIN TEKST</Button>
+      <Button variant="secondary" size="medium">MIN TEKST2</Button>
+      <Button variant="primary" size="large">MIN TEKST3</Button> -->
+<button class={variant + " " + size}><slot /></button>
+
+<style>
+  button {
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  .primary {
+    background-color: blue;
+    color: white;
+  }
+  .secondary {
+    background-color: red;
+    color: white;
+  }
+  .small {
+    font-size: 0.8rem;
+  }
+  .medium {
+    font-size: 1rem;
+  }
+  .large {
+    font-size: 1.2rem;
+  }
+</style>
