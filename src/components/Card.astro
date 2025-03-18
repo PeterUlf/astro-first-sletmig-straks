@@ -7,17 +7,16 @@ const { header } = Astro.props;
 <article>
   <h2>{header}</h2>
   <p>Fællestekst for alle cards</p>
-  <div class="carddesign">
-    <slot />
-  </div>
+
+  <slot />
 </article>
 
 <style>
   article {
     border: 1px solid black;
-  }
-  p,
-  .carddesign :global(p) {
-    color: white;
+
+    p {
+      color: white;
+    }
   }
 </style>
